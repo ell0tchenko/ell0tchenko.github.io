@@ -1,0 +1,51 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 50px;
+    color: #aec68e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 400px;
+}
+
+form input,
+form button {
+    padding: 10px 5%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    margin-bottom: 30px;
+    border: 0;
+    background: #222;
+    color: aliceblue;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+form input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+form button:hover {
+    background: #aec68e;
+    color: #222;
+    transform: scale(1.01);
+    cursor: pointer;
+}

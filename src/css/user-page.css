@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    background-image: url('./img/toothless1.jpg');
+}
+
+.user-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logout {
+    background-color: #222;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: 700px
+}
+
+#logout:hover {
+    background: #aec68e;
+    color: #222;
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.user-page_container {
+    color: aliceblue;
+    width: fit-content;
+    border: 0;
+    background: #222;
+    outline: none;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 80px;
+}
+
+.user-page_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills,
+p,
+li {
+    padding-top: 10px;
+    font-size: 15pt;
+
+}
+
+.skills_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2,
+h3 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 20pt;
+    padding-top: 20px;
+}
+
+li {
+    margin-left: 25px;
+}
+
+.charts_container{
+    display: flex;
+    /* flex-direction: column; */
+}

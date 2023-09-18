@@ -10,47 +10,43 @@ export const queryList = {
 
   xpAmountQuery: `
     {
-      transaction(where: { userId: { _eq: 6963 }
-      type: {_eq: "xp"}}){
-        amount
-        path
-      }
-      }`,
+      user {
+        mystats:transactions(where: {
+          type: {_eq:"xp"}
+        })
+        {
+          amount
+          path
+        }
+      }}`,
 
   skillsQuery: `
     {
-      transaction(where: { userId: { _eq: 6963 }}){
+      user {
+        mystats:transactions        {
         amount
         type
         path
         createdAt
-      }
-      }`,
-  nestedQuery: `
-      {
-        result {
-          id
-          user {
-            id
-            login
-          }
         }
       }
-`,
-upAuditQuery: `
-{
-  transaction(where: { userId: { _eq: 6963 }
-  type: {_eq: "up"}}){
-    amount
-  }
-  }`,
-  downAuditQuery: `
+    }`,
+  upAuditQuery: `
   {
-    transaction(where: { userId: { _eq: 6963 }
-    type: {_eq: "down"}}){
-      amount
+    user {
+      mystats:transactions(where: 
+        {type: {_eq: "up"}}){
+        amount
     }
-    }`
+    }}`,
+      downAuditQuery: `
+      {
+        user {
+          mystats:transactions(where: 
+            {type: {_eq: "down"}}){
+            amount
+        }
+        }}`
 }
 
 

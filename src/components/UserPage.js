@@ -8,7 +8,7 @@ function UserProfile({ data }) {
   let dataUser = data[0].data.user[0]
 
   // get data about user skills
-  let dataSkills = data[2].data.transaction
+  let dataSkills = data[2].data.user[0].mystats
   const dataSkillsFiltered = dataSkills.filter((obj) => obj.type.includes("skill"))
   const dataSkillsObject = {};
   dataSkillsFiltered.forEach(item => {
@@ -39,11 +39,11 @@ function UserProfile({ data }) {
   });
 
   // get data about user audits
-  let dataUpAudits = data[4].data.transaction
+  let dataUpAudits = data[3].data.user[0].mystats
   const totalUpAmount = dataUpAudits.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.amount;
   }, 0);
-  let dataDownAudits = data[5].data.transaction
+  let dataDownAudits = data[4].data.user[0].mystats
   const totalDownAmount = dataDownAudits.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.amount;
   }, 0);
@@ -55,7 +55,7 @@ function UserProfile({ data }) {
   ]
 
   // get data about user xp
-  let dataXP = data[1].data.transaction
+  let dataXP = data[1].data.user[0].mystats
   const sum = dataXP.reduce((total, obj) => {
     if (!obj.path.includes("piscine")) {
       return total + obj.amount

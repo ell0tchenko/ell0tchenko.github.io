@@ -10,7 +10,6 @@ export async function getData(auth) {
         { query: queryList.userQuery },
         { query: queryList.xpAmountQuery },
         { query: queryList.skillsQuery },
-        { query: queryList.nestedQuery },
         { query: queryList.upAuditQuery },
         { query: queryList.downAuditQuery },
 
